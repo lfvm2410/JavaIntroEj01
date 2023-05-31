@@ -26,8 +26,11 @@ public class JavaIntroEj01 {
         //javaIntroEj01.Ejercicio5();
         //javaIntroEj01.DeteccionErrores3();
         //javaIntroEj01.Ejercicio6();
-        javaIntroEj01.Ejercicio7();
-        // Pagina actual #24. Estructuras repetitivas
+        //javaIntroEj01.Ejercicio7();
+        //javaIntroEj01.Ejercicio8();
+        //javaIntroEj01.Ejercicio9();
+        javaIntroEj01.Ejercicio10();
+        // Pagina actual #31. Funciones, ejercicio #11
     }
     
     public void Ejercicio1_2(){
@@ -129,5 +132,53 @@ public class JavaIntroEj01 {
                 System.out.println("No existe un valor válido para tipo de bomba");
                 break;
         }
+    }
+    
+    public void Ejercicio8(){
+        Scanner scanner = new Scanner(System.in);
+        int nota = 11;
+        while (nota < 0 || nota > 10){
+            System.out.println("Ingrese una nota entre 0 y 10: ");
+            nota = scanner.nextInt();
+        }
+    }
+    
+    public void Ejercicio9(){
+        Scanner scanner = new Scanner(System.in);
+        int num;
+        int contadorNumeros = 1, resultado = 0;
+        do{
+            System.out.println("Ingrese el numero #" + contadorNumeros + ":");
+            num = scanner.nextInt();
+            if(num > 0){
+                resultado += num;
+            }else if(num == 0){
+                System.out.println("Se capturó el numero cero");
+                break;
+            }
+            contadorNumeros++;
+        }while(contadorNumeros < 20);
+        System.out.println("Resultado de sumatoria: " + resultado);
+    }
+    
+    public void Ejercicio10(){
+        Scanner scanner = new Scanner(System.in);
+        int num;
+        int contadorNumeros = 1;
+        do{
+            System.out.println("Ingrese el numero #" + contadorNumeros + ":");
+            num = scanner.nextInt();
+            if(num >= 1 && num <= 20){
+                System.out.print(num);
+                for(int i = 0; i < num; i++){
+                    System.out.print("*");
+                }
+                System.out.println("");
+                contadorNumeros++;
+            }else{
+                System.out.println("Ingrese un numero valido comprendido entre 1 y 20!");
+            }
+        }while(contadorNumeros <= 4);
+    
     }
 }
