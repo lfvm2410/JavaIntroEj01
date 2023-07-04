@@ -29,8 +29,10 @@ public class JavaIntroEj01 {
         //javaIntroEj01.Ejercicio7();
         //javaIntroEj01.Ejercicio8();
         //javaIntroEj01.Ejercicio9();
-        javaIntroEj01.Ejercicio10();
-        // Pagina actual #31. Funciones, ejercicio #11
+        //javaIntroEj01.Ejercicio10();
+        //javaIntroEj01.Ejercicio11();
+        javaIntroEj01.Ejercicio12();
+        // Pagina actual #34
     }
     
     public void Ejercicio1_2(){
@@ -179,6 +181,51 @@ public class JavaIntroEj01 {
                 System.out.println("Ingrese un numero valido comprendido entre 1 y 20!");
             }
         }while(contadorNumeros <= 4);
+    }
     
+    public void Ejercicio11(){
+        Scanner scanner = new Scanner(System.in);
+        String frase, output = "";
+        do{
+            System.out.println("Ingrese una frase (debe terminar con .): ");
+            frase = scanner.nextLine();
+        }while(frase.charAt(frase.length()-1) != '.');
+        for (int i = 0; i < frase.length(); i++) {
+            switch (frase.toLowerCase().charAt(i)){
+                case 'a':
+                    output += "@";
+                    break;
+                case 'e':
+                    output += "#";
+                    break;
+                case 'i':
+                    output += "$";
+                    break;
+                case 'o':
+                    output += "%";
+                    break;
+                case 'u':
+                    output += "*";
+                    break;
+                default:
+                    output += frase.charAt(i);
+                    break;
+            }
+        }
+        System.out.println("Frase resultado: " + output);
+    }
+    
+    public void Ejercicio12(){
+        Scanner scanner = new Scanner(System.in);
+        int numero_1, numero_2 = 0;
+        System.out.println("Ingreso el primer numero: ");
+        numero_1 = scanner.nextInt();
+        System.out.println("Ingreso el segundo numero: ");
+        numero_2 = scanner.nextInt();
+        if (numero_1 % numero_2 == 0){
+            System.out.println("El numero '" + numero_1 + "' es multiplo del numero '" + numero_2 + "'");
+        }else{
+            System.out.println("El numero '" + numero_1 + "' no es multiplo del numero '" + numero_2 + "'");
+        }
     }
 }
