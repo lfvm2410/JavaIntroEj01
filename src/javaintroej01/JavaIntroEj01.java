@@ -11,6 +11,8 @@ import java.util.Scanner;
  * @author luis_
  */
 public class JavaIntroEj01 {
+    
+    public String [] equipo;
 
     /**
      * @param args the command line arguments
@@ -31,8 +33,9 @@ public class JavaIntroEj01 {
         //javaIntroEj01.Ejercicio9();
         //javaIntroEj01.Ejercicio10();
         //javaIntroEj01.Ejercicio11();
-        javaIntroEj01.Ejercicio12();
-        // Pagina actual #34
+        //javaIntroEj01.Ejercicio12();
+        //javaIntroEj01.Ejercicio13();
+        //javaIntroEj01.Ejercicio14();
     }
     
     public void Ejercicio1_2(){
@@ -226,6 +229,18 @@ public class JavaIntroEj01 {
             System.out.println("El numero '" + numero_1 + "' es multiplo del numero '" + numero_2 + "'");
         }else{
             System.out.println("El numero '" + numero_1 + "' no es multiplo del numero '" + numero_2 + "'");
+        }
+    }
+    
+    public void Ejercicio13(){
+        this.equipo = new String [5];
+    }
+    
+    public void Ejercicio14(){
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < this.equipo.length; i++) {
+            System.out.println("Ingrese el integrante #" + (i + 1) + " del equipo");
+            this.equipo[i] = scanner.nextLine();
         }
     }
 }
